@@ -1,3 +1,9 @@
+/* Usage example: "./selection 10000" to generate 10000 random numbers and sort them. No numbers are shown, just the time taken to process. The output will be like this:
+   Allocating memory... [0.000008 secs]
+   Inserting random numbers on array... [0.000346 secs]
+   Sorting array using selection sort...  100% [0.079272 secs]
+   Done! 
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,7 +24,7 @@ void selec_sort(int *array){
 	    five_percent += array_size/20;
 	    five_percent_inc += 5;
 	    if (five_percent_inc == 10) {
-		printf("\033[2D");
+		printf("\033[2D"); // moves the cursor 2 steps back
 	    } else {
 		printf("\033[3D");
 	    }
